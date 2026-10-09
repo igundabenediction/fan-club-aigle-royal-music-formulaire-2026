@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07152f">
+<meta name="description" content="Rejoignez le Fan Club Aigle Royal Music. Inscrivez-vous où que vous soyez dans le monde et partagez votre passion pour la musique.">
+
+<title>Inscription | Fan Club Aigle Royal Music 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #07152f;
+  --navy2: #102952;
+  --gold: #f5c451;
+  --gold2: #ffe5a0;
+  --white: #fff;
+  --muted: #66748a;
+  --line: #dce4f0;
+  --green: #0aaf61;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--navy);
+  background: var(--navy);
+}
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+
+.navbar {
+  min-height: 76px;
+  padding: 13px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: rgba(4,15,37,.96);
+  color: white;
+  border-bottom: 2px solid var(--gold);
+  position: relative;
+  z-index: 5;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo {
+  width: 51px;
+  height: 51px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.brand strong {
+  display: block;
+  color: var(--gold);
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+.brand small {
+  display: block;
+  margin-top: 4px;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .25s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy) !important;
+  border-radius: 30px;
+  padding: 12px 18px;
+  font-weight: 800;
+}
+
+.hero {
+  position: relative;
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  isolation: isolate;
+}
+.slides, .shade {
+  position: absolute;
+  inset: 0;
+}
+.slides { z-index: -2; }
+.slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  animation: slideshow 21s infinite;
+}
+.slide:nth-child(1) {
+  background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85');
+}
+.slide:nth-child(2) {
+  background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1800&q=85');
+  animation-delay: 7s;
+}
+.slide:nth-child(3) {
+  background-image: url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1800&q=85');
+  animation-delay: 14s;
+}
+@keyframes slideshow {
+  0% { opacity: 0; transform: scale(1.02); }
+  5% { opacity: 1; }
+  30% { opacity: 1; transform: scale(1.1); }
+  36% { opacity: 0; }
+  100% { opacity: 0; }
+}
+.shade {
+  z-index: -1;
+  background: linear-gradient(90deg,rgba(3,13,34,.88),rgba(3,13,34,.55),rgba(3,13,34,.82));
+}
+.hero-content {
+  width: min(900px, 92%);
+  padding: 60px 10px;
+  animation: appear .9s ease both;
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.eyebrow {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 7vw, 68px);
+  line-height: 1.08;
+  margin: 16px 0;
+  text-shadow: 0 4px 25px #0009;
+}
+.hero h1 span { color: var(--gold); }
+.hero p {
+  font-size: clamp(15px, 2vw, 19px);
+  color: #f0f3fb;
+  line-height: 1.7;
+}
+.hero-button {
+  display: inline-block;
+  margin-top: 17px;
+  background: linear-gradient(135deg,#ffe29a,#e9b33c);
+  color: var(--navy);
+  padding: 15px 25px;
+  border-radius: 35px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 7px 25px #0004;
+  transition: transform .25s;
+}
+.hero-button:hover { transform: translateY(-3px); }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+  max-width: 1100px;
+  padding: 28px 20px;
+  margin: auto;
+}
+.feature {
+  padding: 18px;
+  text-align: center;
+  color: white;
+  border: 1px solid #f5c45140;
+  background: #ffffff08;
+  border-radius: 14px;
+}
+.feature-icon {
+  font-size: 27px;
+  color: var(--gold);
+}
+.feature h3 { font-size: 16px; margin: 10px 0 5px; }
+.feature p { font-size: 13px; line-height: 1.6; color: #cbd5e7; margin: 0; }
+
+main {
+  padding: 15px 18px 55px;
+  background:
+    radial-gradient(ellipse at top,#1c3764 0,transparent 65%),
+    var(--navy);
+}
+.card {
+  max-width: 850px;
+  margin: auto;
+  padding: clamp(22px,5vw,43px);
+  background: rgba(255,255,255,.98);
+  border: 2px solid var(--gold);
+  border-radius: 22px;
+  box-shadow: 0 20px 70px #0005, 0 0 25px #f5c45122;
+  animation: appear .7s ease both;
+}
+.form-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.crown { font-size: 35px; }
+.form-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(25px,4vw,35px);
+  margin: 0;
+}
+.intro {
+  margin: 0 0 27px;
+  color: #53627b;
+  line-height: 1.8;
+}
+.section-label {
+  margin: 25px 0 15px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+  color: #a16e09;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 19px;
+}
+.field { min-width: 0; }
+.full { grid-column: 1 / -1; }
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+input, select, textarea {
+  width: 100%;
+  min-height: 47px;
+  border: 1px solid #cdd8e8;
+  border-radius: 9px;
+  padding: 12px 14px;
+  color: var(--navy);
+  background: #fff;
+  transition: border .2s, box-shadow .2s;
+}
+input::placeholder, textarea::placeholder { color: #8795aa; }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #c89b31;
+  box-shadow: 0 0 0 3px #f5c45130;
+}
+textarea { min-height: 110px; resize: vertical; }
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  line-height: 1.65;
+  font-weight: 500;
+}
+.check input {
+  width: 18px;
+  min-height: 18px;
+  flex: 0 0 18px;
+  margin-top: 3px;
+  accent-color: #b78519;
+}
+.submit {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(120deg,#07152f,#173767);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 7px 20px #07152f20;
+  transition: transform .2s, box-shadow .2s;
+}
+.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px #07152f30;
+}
+.note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+.whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  margin-top: 22px;
+  border-radius: 35px;
+  text-decoration: none;
+  background: linear-gradient(120deg,#13b965,#078b4c);
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 7px 20px #0aaf6125;
+  transition: transform .2s;
+}
+.whatsapp:hover { transform: translateY(-2px); }
+.status {
+  display: none;
+  margin-top: 18px;
+  padding: 14px;
+  background: #fff6df;
+  border: 1px solid #e8c56e;
+  border-radius: 9px;
+  color: #684b0b;
+  line-height: 1.6;
+  font-size: 13px;
+}
+footer {
+  padding: 32px 18px;
+  text-align: center;
+  color: white;
+  background: #040d20;
+  border-top: 2px solid var(--gold);
+}
+.footer-motto {
+  color: var(--gold);
+  font-family: 'Playfair Display',serif;
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 17px 0;
+}
+.socials a {
+  color: #f6d98b;
+  text-decoration: none;
+  font-size: 13px;
+}
+footer small { color: #b9c5d8; line-height: 1.8; }
+
+@media(max-width:700px) {
+  .navbar { justify-content: center; text-align: center; }
+  .nav-links { justify-content: center; gap: 14px; }
+  .nav-links a { font-size: 12px; }
+  .hero { min-height: 350px; }
+  .features { grid-template-columns: 1fr; gap: 10px; }
+  .feature { display: flex; align-items: center; text-align: left; gap: 14px; }
+  .feature-icon { min-width: 35px; }
+}
+@media(max-width:520px) {
+  .grid { grid-template-columns: 1fr; }
+  .full { grid-column: auto; }
+  .brand strong { font-size: 13px; }
+  .brand small { font-size: 9px; }
+  .nav-links { gap: 12px; }
+  .nav-cta { padding: 10px 13px; }
+  .card { border-radius: 15px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <a class="brand" href="#accueil" aria-label="Accueil Fan Club Aigle Royal Music">
+    <span class="logo" aria-hidden="true">AR</span>
+    <span>
+      <strong>AIGLE ROYAL MUSIC</strong>
+      <small>FAN CLUB OFFICIEL</small>
+    </span>
+  </a>
+
+  <nav class="nav-links" aria-label="Navigation principale">
+    <a href="#accueil">Accueil</a>
+    <a href="#avantages">Avantages</a>
+    <a href="#inscription">Inscription</a>
+    <a class="nav-cta" href="#inscription">♛ Rejoindre le Fan Club</a>
+  </nav>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="slides" aria-hidden="true">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+  <div class="shade"></div>
+
+  <div class="hero-content">
+    <div class="eyebrow">UNE COMMUNAUTÉ INTERNATIONALE</div>
+    <h1>Bienvenue au<br><span>FAN CLUB</span><br>AIGLE ROYAL MUSIC</h1>
+    <p>Unis par la musique, fidèles à l’artiste.<br>
+      Rejoignez une famille de passionnés, où que vous soyez dans le monde.</p>
+    <a class="hero-button" href="#inscription">✦ Je rejoins la communauté</a>
+  </div>
+</section>
+
+<section class="features" id="avantages">
+  <article class="feature">
+    <div class="feature-icon">♛</div>
+    <div>
+      <h3>Une famille internationale</h3>
+      <p>Rencontrez des fans qui partagent votre passion.</p>
+    </div>
+  </article>
+  <article class="feature">
+    <div class="feature-icon">♫</div>
+    <div>
+      <h3>Au cœur de la musique</h3>
+      <p>Restez informé des actualités et des nouveautés.</p>
+    </div>
+  </article>
+  <article class="feature">
+    <div class="feature-icon">★</div>
+    <div>
+      <h3>Une passion qui nous unit</h3>
+      <p>Participez à la vie de la communauté et soutenez l’artiste.</p>
+    </div>
+  </article>
+</section>
+
+<main>
+<section class="card" id="inscription">
+  <div class="form-heading">
+    <span class="crown" aria-hidden="true">♛</span>
+    <h2>Formulaire d’inscription</h2>
+  </div>
+
+  <p class="intro">
+    Bienvenue au Fan Club Aigle Royal Music ! Remplissez les informations
+    ci-dessous pour soumettre votre demande d’adhésion, où que vous soyez
+    dans le monde. Toutes les personnes passionnées par notre musique sont
+    les bienvenues.
+  </p>
+
+  <form id="fanForm"
+        action="https://formsubmit.co/secretariataigleroyalmusic@gmail.com"
+        method="POST">
+
+    <input type="hidden" name="_subject"
+           value="Nouvelle inscription — Fan Club Aigle Royal Music 2026">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="true">
+
+    <!-- Après activation, cette page s'affichera après l'envoi. -->
+    <input type="hidden" name="_next" id="nextPage" value="">
+
+    <div class="section-label">01 — Informations personnelles</div>
+
+    <div class="grid">
+      <div class="field">
+        <label for="nom">Nom complet *</label>
+        <input id="nom" name="Nom complet" type="text"
+               autocomplete="name" required maxlength="120"
+               placeholder="Votre nom et prénom">
+      </div>
+
+      <div class="field">
+        <label for="sexe">Sexe (facultatif)</label>
+        <select id="sexe" name="Sexe">
+          <option value="">Choisir (facultatif)</option>
+          <option value="Féminin">Féminin</option>
+          <option value="Masculin">Masculin</option>
+          <option value="Préfère ne pas répondre">Préfère ne pas répondre</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="age">Âge *</label>
+        <input id="age" name="Âge" type="number"
+               min="13" max="120" required placeholder="Votre âge">
+      </div>
+
+      <div class="field">
+        <label for="pays">Pays de résidence *</label>
+        <input id="pays" name="Pays de résidence"
+               autocomplete="country-name" required maxlength="100"
+               placeholder="Ex. : République démocratique du Congo">
+      </div>
+
+      <div class="field">
+        <label for="ville">Ville *</label>
+        <input id="ville" name="Ville" required maxlength="100"
+               autocomplete="address-level2" placeholder="Votre ville">
+      </div>
+
+      <div class="field">
+        <label for="whatsapp">Numéro WhatsApp *</label>
+        <input id="whatsapp" name="Numéro WhatsApp" type="tel"
+               autocomplete="tel" required maxlength="30"
+               placeholder="Ex. : +243 99 000 0000">
+      </div>
+
+      <div class="field full">
+        <label for="email">Adresse e-mail *</label>
+        <input id="email" name="Adresse e-mail" type="email"
+               autocomplete="email" required maxlength="160"
+               placeholder="vous@exemple.com">
+      </div>
+    </div>
+
+    <div class="section-label">02 — Votre passion</div>
+
+    <div class="grid">
+      <div class="field full">
+        <label for="motivation">Pourquoi souhaitez-vous rejoindre le Fan Club ?</label>
+        <textarea id="motivation" name="Motivation" maxlength="1500"
+                  placeholder="Présentez-vous et partagez votre passion (facultatif)."></textarea>
+      </div>
+
+      <div class="field full">
+        <label class="check" for="consentement">
+          <input id="consentement" type="checkbox" name="Consentement"
+                 value="J'accepte le traitement de mes informations pour mon inscription."
+                 required>
+          <span>J’accepte que mes informations soient utilisées par le secrétariat
+          pour traiter ma demande d’inscription. *</span>
+        </label>
+      </div>
+    </div>
+
+    <button class="submit" type="submit">
+      ✉ Envoyer mon inscription
+    </button>
+
+    <p class="note">
+      Les champs marqués d’un astérisque (*) sont obligatoires.
+      Vos informations sont transmises au secrétariat pour le traitement
+      de votre demande.
+    </p>
+
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+  </form>
+
+  <a class="whatsapp"
+     href="https://wa.me/243993478376?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20au%20Fan%20Club%20Aigle%20Royal%20Music."
+     target="_blank" rel="noopener noreferrer">
+    <span aria-hidden="true">◉</span>
+    <span>Contacter le secrétariat sur WhatsApp<br>
+      <small>+243 993 478 376</small>
+    </span>
+  </a>
+</section>
+</main>
+
+<footer>
+  <div class="footer-motto">La musique nous unit !</div>
+  <div class="socials">
+    <!-- Remplace les liens # par les adresses officielles. -->
+    <a href="#" aria-label="Facebook">Facebook</a>
+    <a href="#" aria-label="Instagram">Instagram</a>
+    <a href="#" aria-label="YouTube">YouTube</a>
+    <a href="#" aria-label="TikTok">TikTok</a>
+  </div>
+  <small>
+    © 2026 Fan Club Aigle Royal Music. Tous droits réservés.<br>
+    Une passion, une musique, une famille.
+  </small>
+</footer>
+
+<script>
+(() => {
+  const form = document.getElementById('fanForm');
+  const nextPage = document.getElementById('nextPage');
+
+  // Configure une redirection vers la même page après soumission.
+  // FormSubmit doit d'abord avoir été activé pour l'adresse e-mail.
+  nextPage.value = window.location.href.split('#')[0];
+
+  form.addEventListener('submit', (event) => {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.reportValidity();
+      return;
+    }
+
+    const age = Number(document.getElementById('age').value);
+    if (age < 13 || age > 120) {
+      event.preventDefault();
+      document.getElementById('age').setCustomValidity(
+        'Veuillez saisir un âge compris entre 13 et 120 ans.'
+      );
+      document.getElementById('age').reportValidity();
+      document.getElementById('age').setCustomValidity('');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
